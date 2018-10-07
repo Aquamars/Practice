@@ -12,7 +12,7 @@ const findA = (s, p) => {
     const pattern = p.split('');
     
     let mapP = {};
-    let setP = new Set(pattern);
+
     pattern.forEach(e=> {        
         if(mapP[e] === undefined){ 
             mapP[e] = 1; 
@@ -24,7 +24,6 @@ const findA = (s, p) => {
     let tmpP = {};
     let count = 0;
     for(let i=0; i<ary.length;i++){
-        let jump = 0;
         let e = ary[i];
         if(i < pattern.length-1){
             if(tmpP[e] === undefined){ 
@@ -32,7 +31,6 @@ const findA = (s, p) => {
             }else{
                 tmpP[e] += 1;
             }
-            count ++;
         }else{
             // console.log(i,e,tmpP)
             if(tmpP[e] === undefined){ 
