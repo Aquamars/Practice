@@ -7,7 +7,6 @@ var checkPossibility = function(nums) {
 };
 
 const checkNonDeAry = nums => {
-    let pre = null;
     let count = 0;
     for(let i=0;i<nums.length;i++){
         if(i > 0 && nums[i-1] - nums[i] > 0){
