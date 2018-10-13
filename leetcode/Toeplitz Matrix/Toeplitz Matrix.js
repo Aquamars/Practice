@@ -8,7 +8,6 @@ var isToeplitzMatrix = function(matrix) {
 
 const isToeplitz = matrix => {
     let tmp = [];
-    let leng = matrix[0].length;
     for(let i=0;i<matrix.length;i++){
         if(tmp.length != 0){
             if(!matchAry(tmp, matrix[i])) return false;
